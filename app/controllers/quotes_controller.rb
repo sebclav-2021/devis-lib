@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-  before_action :set_castle, only: [:show, :edit, :update, :destroy]
+  before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   def index
     @quotes = Quote.all
@@ -37,11 +37,11 @@ class QuotesController < ApplicationController
 
   private
 
-  def castle_params
+  def quote_params
     params.require(:quote).permit(:due_date, :payment_choice, :comment, :price, :coeff)
   end
 
-  def set_castle
+  def set_quote
     @quote = Quote.find(params[:id])
   end
 end

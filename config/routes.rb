@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources :products, only: [:new, :create] do
     resources :supplies, only: [:index, :new, :create]
   end
-  resources :customers, only: [:new, :create]
+  resources :customers
   resources :categories, only: [:new, :create]
 end
