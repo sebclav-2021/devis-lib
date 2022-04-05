@@ -10,11 +10,10 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
-    @customer.user = current_user
     if @customer.save
       redirect_to root_path
     else
-      render :new
+      redirect_to new_customer_path
     end
   end
 
