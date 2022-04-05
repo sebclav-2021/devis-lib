@@ -1,0 +1,22 @@
+<div class="container list">
+  <div class="container">
+    <h1>Mes Clients</h1>
+  </div>
+  <br>
+    <ul>
+      <div class="customers">
+        <% @customers.each do |customer| %>
+          <li>
+              <h2 class="categorie"><%= link_to customer.name, customer %></h2>
+              <%= link_to customer_path(customer), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
+            </div>
+          </li>
+        <% end  %>
+      </div>
+    </ul>
+</div>
+<%= link_to 'home', root_path %>
