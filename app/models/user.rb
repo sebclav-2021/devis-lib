@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :quotes
   has_many :services
-  has_many :customers, through: :quotes
+  has_many :customers through :quotes
 end
