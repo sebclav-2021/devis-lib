@@ -1,0 +1,21 @@
+<div class="container list">
+  <div class="container">
+    <h1>Mes Devis</h1>
+  </div>
+  <br>
+    <ul>
+      <div class="quotes">
+        <% @quotes.each do |quote| %>
+          <li>
+              <h2 class="categorie"><%= link_to quote.user.name, quote %></h2>
+              <%= link_to quote_path(quote), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
+            </div>
+          </li>
+        <% end  %>
+      </div>
+    </ul>
+</div>
