@@ -1,0 +1,22 @@
+<br>
+<br>
+<div class="container new">
+  <div class="container title">
+    <h1>Créez un Devis</h1>
+  </div>
+  <div class="container form">
+    <%= simple_form_for(@quote) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :due_date, label: 'Validité du devis' %>
+        <%= f.input :comment, label: 'Commentaires du poste'%>
+        <%= f.input :payment_choice, label: 'Choix de mode de paiement'%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit 'Créez le Devis'%>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Home', root_path%>
