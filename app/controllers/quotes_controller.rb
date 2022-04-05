@@ -13,9 +13,9 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote_params)
     @quote.user = current_user
     if @quote.save
-      redirect_to quote_path(@quote)
+      redirect_to root_path
     else
-      render :new
+      redirect_to new_quote_path
     end
   end
 
@@ -38,7 +38,7 @@ class QuotesController < ApplicationController
   private
 
   def quote_params
-    params.require(:quote).permit(:due_date, :payment_choice, :comment, :price, :coeff)
+    params.require(:quote).permit(:due_date, :payment_choice, :comment)
   end
 
   def set_quote
