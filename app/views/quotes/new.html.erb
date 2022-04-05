@@ -10,6 +10,9 @@
         <%= f.input :due_date, label: 'Validité du devis' %>
         <%= f.input :comment, label: 'Commentaires du poste'%>
         <%= f.input :payment_choice, label: 'Choix de mode de paiement'%>
+        <%= f.input :price, label: 'Prix' %>
+        <%= f.input :coeff, label: 'Cote' %>
+        <%= f.input :customer, collection: Customer.all%>
       </div>
 
       <div class="form-actions">
