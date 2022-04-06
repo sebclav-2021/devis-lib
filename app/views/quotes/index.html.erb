@@ -7,7 +7,7 @@
       <div class="quotes">
         <% @quotes.each do |quote| %>
           <li>
-              <h2 class="categorie"><%= link_to quote.id, quote %></h2>
+              <h2 class="categorie"><%= link_to "devis n°: #{quote.id}", quote %></h2>
               <%= link_to quote_path(quote), class: 'trash',
                     method: :delete,
                     data: { confirm: "Are you sure?" } do%>

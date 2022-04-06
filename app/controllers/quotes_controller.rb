@@ -40,7 +40,7 @@ class QuotesController < ApplicationController
   private
 
   def quote_params
-    params.require(:quote).permit(:due_date, :customer, :payment_choice, :comment, :price, :coeff)
+    params.require(:quote).permit(:due_date, :payment_choice, :comment, :price, :coeff)
   end
 
   def set_quote
