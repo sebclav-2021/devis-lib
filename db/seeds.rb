@@ -8,6 +8,7 @@
 
 require 'faker'
 
+Category.destroy_all
 Customer.destroy_all
 User.destroy_all
 
@@ -30,3 +31,27 @@ User.create!(
   )
   customer.save!
 end
+
+Category.create!(
+  name: 'Plomberie'
+)
+
+Category.create!(
+  name: 'Electricité'
+)
+
+Category.create!(
+  name: 'Maçonnerie'
+)
+
+Category.create!(
+  name: 'Peinture'
+)
+
+Category.create!(
+  name: 'Quicaillerie'
+)
+
+Category.create!(
+  name: 'Sanitaire'
+)

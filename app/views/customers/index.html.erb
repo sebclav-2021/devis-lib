@@ -9,7 +9,7 @@
         <% @customers.each do |customer| %>
           <li>
             <div class="container">
-              <h2 class="categorie"><%= link_to customer.name, customer %></h2>
+              <h2 class="name"><%= link_to customer.name, customer %></h2>
               <%= link_to customer_path(customer), class: 'trash',
                     method: :delete,
                     data: { confirm: "Are you sure?" } do%>

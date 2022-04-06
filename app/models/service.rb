@@ -1,5 +1,5 @@
 class Service < ApplicationRecord
   belongs_to :user
   belongs_to :category
-  has_many :lines
+  has_many :lines, dependent: :destroy
 end
