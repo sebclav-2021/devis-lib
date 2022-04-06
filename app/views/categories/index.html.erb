@@ -1,0 +1,41 @@
+<div class="container list">
+  <div class="container">
+    <h1>Selectionnez vos Catégories</h1>
+  </div>
+  <br>
+  <div class="categories">
+    <ul>
+      <div class="lists-categories">
+        <% @categories.each do |category| %>
+          <li>
+            <div class="container">
+              <h2 class="name"><%= category.name %>
+                               <%= form_for(@category) do |f| %>
+                                 <%= f.check_box :selected %>
+                               <% end %></h2>
+            </div>
+          </li>
+        <% end  %>
+      </div>
+    </ul>
+  </div>
+
+
+
+
+  <div class="container new">
+    <div class="container form">
+      <%= simple_form_for(@category) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :name %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit 'Validez'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</div>
+<%= link_to 'home', root_path %>
