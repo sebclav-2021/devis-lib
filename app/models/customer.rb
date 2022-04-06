@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  has_many :quotes
+  has_many :quotes, dependent: :destroy
   def display_name
     self.name
   end

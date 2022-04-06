@@ -3,10 +3,12 @@
     <h1>Mes Clients</h1>
   </div>
   <br>
+  <div class="customers">
     <ul>
-      <div class="customers">
+      <div class="lists-customer">
         <% @customers.each do |customer| %>
           <li>
+            <div class="container">
               <h2 class="categorie"><%= link_to customer.name, customer %></h2>
               <%= link_to customer_path(customer), class: 'trash',
                     method: :delete,
@@ -18,5 +20,6 @@
         <% end  %>
       </div>
     </ul>
+  </div>
 </div>
 <%= link_to 'home', root_path %>
