@@ -1,19 +1,17 @@
 <h1>Details de la Prestation</h1>
 
-<h2><%= @category(@category) %></h2>
+<h2><%= @category.name %></h2>
 
 <div class="container new">
     <div class="container form">
-      <%= simple_form_for(@service) do |f| %>
+      <%= simple_form_for([@category, @service]) do |f| %>
         <div class="form-inputs">
           <%= f.input :description %>
-          <%= f.input :product, collection: Product.all%>
-          <%= f.input unite: @product.unite  %>
-          <%= f.input :quatity %>
-          <%= f.input :price %>
+          <%= f.association :product, collection: Product.all%>
+          <%= f.association unite: @product.unite  %>
         </div>
         <div class="form-actions">
-          <%= f.submit 'Validez'%>
+          <%= f.submit 'Valider'%>
         </div>
       <% end %>
     </div>
