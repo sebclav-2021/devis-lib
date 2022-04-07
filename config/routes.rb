@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     resources :supplies, only: [:index, :new, :create]
   end
   resources :customers
-  resources :categories, only: [:index, :new, :create]
+  resources :categories, only: [:index, :new, :create, :destroy]
 end
