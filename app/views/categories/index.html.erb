@@ -1,6 +1,6 @@
 <div class="container list">
   <div class="container">
-    <h1>Selectionnez vos Catégories</h1>
+    <h1>Vos Prestations</h1>
   </div>
   <br>
   <div class="categories">
@@ -13,6 +13,11 @@
                                <%= form_for(@category) do |f| %>
                                  <%= f.check_box :selected %>
                                <% end %></h2>
+              <%= link_to category_path(category), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
             </div>
           </li>
         <% end  %>

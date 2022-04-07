@@ -1,0 +1,20 @@
+<h1>Details de la Prestation</h1>
+
+<h2><%= @category(@category) %></h2>
+
+<div class="container new">
+    <div class="container form">
+      <%= simple_form_for(@service) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :description %>
+          <%= f.input :product, collection: Product.all%>
+          <%= f.input unite: @product.unite  %>
+          <%= f.input :quatity %>
+          <%= f.input :price %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit 'Validez'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
