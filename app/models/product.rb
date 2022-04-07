@@ -1,3 +1,4 @@
 class Product < ApplicationRecord
-  belongs_to :services, through: :supplies
+  has_many :supplies
+  has_many :services, through: :supplies
 end
