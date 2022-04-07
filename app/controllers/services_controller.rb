@@ -2,11 +2,12 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:edit, :update]
 
   def new
+    @category = Category.find(params[:category_id])
     @service = Service.new
   end
 
   def create
-    @category = Category.find(params[:service][:category].to_i)
+    @category = Category.find(params[:category_id])
     @service = Service.new(service_params)
     @service.user = current_user
     @service.category = @category

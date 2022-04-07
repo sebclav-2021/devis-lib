@@ -2,6 +2,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     @category = Category.new
+    @service = Service.new
   end
 
   def create
