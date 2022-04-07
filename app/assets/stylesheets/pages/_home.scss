@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+.btn-gradient {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin: auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  color: black;
+  padding: 8px 24px;
+  border-radius: 2px;
+  background: linear-gradient(#167FFB, #0F60C4);
+  background: #FBFBFB;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-gradient:hover {
+  color: #FFB800;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}

@@ -1,8 +1,22 @@
-<h1>Pages#home</h1>
-<p>faire un bon gros lien en plein milieu avec le footer à la place de la navbar</p>
+<br>
+<%= image_tag "logo_devis_lib", alt: "Logo de DevisLib", width: 100, class: "mx-auto d-block" %>
 
-<p><%= link_to 'devis', quotes_path%></p>
-<p><%= link_to 'clients', customers_path%></p>
+<%= image_tag "titre_devislib.svg", alt: "Nom de l'application", width: 200, class: "mx-auto d-block" %>
 
-<p><%= link_to 'Créez un devis', categories_path%></p>
-<p><%= link_to 'Créez un client', new_customer_path%></p>
+<h1>Pour un devis instantané !</h1>
+
+<%= image_tag "https://api.iconify.design/openmoji/construction-worker-medium-light-skin-tone.svg?color=%23ffb800&width=80&height=90') no-repeat center center / contain;", class: "mx-auto d-block" %>
+
+
+<h2>Je crée un devis pour</h2>
+
+
+<div>
+  <div>
+    <%= link_to "Un client existant", customers_path, class: "btn btn-gradient" %>
+  </div>
+  <br>
+  <div>
+    <%= link_to "Un nouveau client", new_customer_path, class: "btn btn-gradient" %>
+  </div>
+</div>
