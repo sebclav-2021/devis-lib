@@ -1,0 +1,25 @@
+<div class="container list">
+  <div class="container">
+    <h1>Mes Produits</h1>
+  </div>
+  <br>
+  <div class="customers">
+    <ul>
+      <div class="lists-customer">
+        <% @products.each do |product| %>
+          <li>
+            <div class="container">
+              <h2 class="name"><%= link_to product.name, product %></h2>
+              <%= link_to product_path(product), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
+            </div>
+          </li>
+        <% end  %>
+      </div>
+    </ul>
+  </div>
+</div>
+<%= link_to 'home', root_path %>
