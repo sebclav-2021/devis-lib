@@ -1,7 +1,11 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-  def index
-    @customers = Customer.all
+  def index    
+    if params[:query].present?
+      @customers = Customer.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @customers = Customer.all
+    end
   end
 
   def new
