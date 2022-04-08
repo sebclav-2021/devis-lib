@@ -2,28 +2,34 @@
   background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
-  height: 500px;
+  flex-direction: column;
 }
 
 .user {
   text-align:left;
   display: flex;
   flex-direction: column;
+  width: 50%;
+  p {
+    margin: 0;
+  }
 }
 
 .customer {
   text-align: left;
   display: flex;
   flex-direction: column;
-}
-
-ul {
-  list-style-type: none;
-  padding: none;
-  position: fixed;
-  top: 95px;
+  width: 50%;
+  p {
+    margin: 0;
+  }
 }
 
 .custom {
   margin-top: 80px;
+}
+
+.customer-container {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -1,22 +1,19 @@
 <br>
 <br>
 <div class="container">
-  <div class="user col-xs-12 col-sm-6 col-md-3">
-    <ul>
-      <li><%=current_user.name%></li>
-      <li><%=current_user.address%></li>
-      <li>Email: <%=current_user.email%></li>
-      <li>Téléphone: <%=current_user.phone%></li>
-      <li>N°Siret: <%=current_user.siret%></li>
-    </ul>
+  <div class="user">
+      <p><%=current_user.name%></p>
+      <p><%=current_user.address%></p>
+      <p>Email: <%=current_user.email%></p>
+      <p>Téléphone: <%=current_user.phone%></p>
+      <p>N°Siret: <%=current_user.siret%></p>
   </div>
-
-  <div class="customer col-xs-12 col-sm-6 col-md-3">
-    <ul>
-      <li><%=@quote.customer.name%></li>
-      <li><%=@quote.customer.address%></li>
-      <li><%=@quote.customer.phone%></li>
-      <li><%=@quote.customer.email%></li>
-    </ul>
+  <div class="customer-container">
+    <div class="customer">
+        <p><%=@quote.customer.name%></p>
+        <p><%=@quote.customer.address%></p>
+        <p><%=@quote.customer.phone%></p>
+        <p><%=@quote.customer.email%></p>
+    </div>
   </div>
 </div>
