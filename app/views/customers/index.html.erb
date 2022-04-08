@@ -1,6 +1,6 @@
 
 
-<div>
+<div class="customers-page">
   <div class="list">
     <h1>Mes Clients</h1>
   </div>
@@ -11,8 +11,10 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Rechercher un client"%>
-        <%= submit_tag "Chercher", class: "button" %>
+          placeholder: "Rechercher un client" %>
+        <div class="button-search">
+          <%= image_submit_tag("button_search.svg") %>
+        </div>
       <% end %>
     </div>
     <div class="customers">
