@@ -1,25 +1,35 @@
+
+
 <div class="container list">
   <div class="container">
     <h1>Mes Clients</h1>
   </div>
   <br>
+  <div class="searching-customer">
+    <%= form_tag customers_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Rechercher un client"%>
+      <%= submit_tag "Chercher", class: "button" %>
+    <% end %>
+  </div>
   <div class="customers">
     <ul>
       <div class="lists-customer">
         <% @customers.each do |customer| %>
-          <li>
-            <div class="container">
-              <h2 class="name"><%= link_to customer.name, customer %></h2>
-              <%= link_to customer_path(customer), class: 'trash',
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } do%>
-                    <i class="fa-regular fa-trash-can"></i>
-                    <% end %>
-            </div>
-          </li>
+          <div class="container">
+            <h2 class="name"><%= link_to customer.name, customer %></h2>
+            <%= link_to customer_path(customer), class: 'trash',
+              method: :delete,
+              data: { confirm: "Are you sure?" } do%>
+              <i class="fa-regular fa-trash-can"></i>
+            <% end %>
+          </div>        
         <% end  %>
       </div>
     </ul>
   </div>
 </div>
 <%= link_to 'home', root_path %>
+
