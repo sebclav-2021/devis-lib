@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-  def index    
+  def index
     if params[:query].present?
       @customers = Customer.where("name ILIKE ?", "%#{params[:query]}%")
     else
@@ -15,7 +15,7 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to root_path
+      redirect_to customers_path
     else
       redirect_to new_customer_path
     end
