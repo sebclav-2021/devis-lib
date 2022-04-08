@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="36mm"
+   height="10mm"
+   viewBox="0 0 36 10"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="titre_devislib.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="49.25"
+     inkscape:cy="4.5"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="text5468" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient18317"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop18315" />
+    </linearGradient>
+    <pattern
+       id="EMFhbasepattern"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter19207"
+       x="-0.43128369"
+       y="-1.3146544"
+       width="1.857895"
+       height="3.5003497">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.44733138"
+         id="feGaussianBlur19209" />
+    </filter>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="fond"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       style="display:inline;opacity:1;fill:#ffb800;fill-opacity:1;stroke-width:0.564999"
+       id="rect1178"
+       width="68.017166"
+       height="33.803093"
+       x="21.165464"
+       y="89.799103" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="effet"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <g
+       id="g18363-7"
+       style="display:inline;opacity:0.6;mix-blend-mode:darken;filter:url(#filter19207)"
+       transform="matrix(1,0,0,0.853549,-36.856468,-83.399732)"
+       inkscape:export-filename="C:\Users\murie\Desktop\Titre.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <text
+         xml:space="preserve"
+         style="font-size:10.5833px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';display:inline;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="37.296333"
+         y="108.45823"
+         id="text5468-9"><tspan
+           sodipodi:role="line"
+           id="tspan5466-6"
+           style="stroke:none;stroke-width:0.264583;stroke-opacity:1"
+           x="37.296333"
+           y="108.45823">Devis<tspan
+   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';stroke:none;stroke-opacity:1"
+   id="tspan11632-8">Lib</tspan></tspan></text>
+      <path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 52.436339,100.38643 c 0,0 1.380379,-2.306685 3.051368,-0.0182"
+         id="path15818-8"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="g18363"
+       style="display:inline;opacity:1;mix-blend-mode:darken"
+       transform="matrix(1,0,0,0.853549,-36.856468,-83.928899)"
+       inkscape:export-filename="C:\Users\murie\Desktop\Titre.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         aria-label="DevisLib"
+         id="text5468"
+         style="font-size:10.5833px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';display:inline;stroke-width:0.264583">
+        <path
+           d="m 38.107651,108.45823 v -7.52407 h 1.793166 q 1.317745,0 2.04638,0.82682 0.728636,0.82166 0.728636,2.3151 v 1.2609 q 0,1.49345 -0.738971,2.30993 -0.73897,0.81132 -2.144565,0.81132 z m 0.945675,-6.70758 v 5.89626 h 0.759642 q 0.997352,0 1.45727,-0.56844 0.459919,-0.5736 0.470254,-1.69498 v -1.33325 q 0,-1.18855 -0.459918,-1.74149 -0.454752,-0.5581 -1.379757,-0.5581 z"
+           id="path3845" />
+        <path
+           d="m 46.019287,108.56158 q -1.04386,0 -1.601964,-0.62011 -0.558104,-0.62529 -0.568439,-1.82934 v -0.67696 q 0,-1.25057 0.542601,-1.95853 0.547768,-0.71314 1.52445,-0.71314 0.981849,0 1.467606,0.62529 0.485757,0.62528 0.496092,1.94819 v 0.59945 h -3.121247 v 0.12919 q 0,0.89916 0.335896,1.30741 0.341063,0.40824 0.976681,0.40824 0.403075,0 0.707965,-0.14986 0.310058,-0.15503 0.578774,-0.48576 l 0.475422,0.57878 q -0.594277,0.83715 -1.813837,0.83715 z m -0.103352,-5.0126 q -0.568439,0 -0.842324,0.39274 -0.273884,0.38758 -0.310057,1.20923 h 2.201409 v -0.12403 q -0.03617,-0.79581 -0.289387,-1.13687 -0.248046,-0.34107 -0.759641,-0.34107 z"
+           id="path3847" />
+        <path
+           d="m 50.494453,107.06814 1.059363,-4.20128 h 0.930173 l -1.658808,5.59137 h -0.682127 l -1.679479,-5.59137 h 0.930173 z"
+           id="path3849" />
+        <path
+           d="m 54.421848,108.45823 h -0.91467 v -5.59137 h 0.91467 z m 0.07235,-7.07448 q 0,0.23254 -0.129191,0.38757 -0.12919,0.15503 -0.392739,0.15503 -0.258382,0 -0.387572,-0.15503 -0.129191,-0.15503 -0.129191,-0.38757 0,-0.23255 0.129191,-0.39274 0.12919,-0.1602 0.387572,-0.1602 0.258381,0 0.387572,0.16537 0.134358,0.16019 0.134358,0.38757 z"
+           id="path3851" />
+        <path
+           d="m 58.576621,107.0268 q 0,-0.29456 -0.222208,-0.50643 -0.222208,-0.21187 -0.857826,-0.49609 -0.73897,-0.30489 -1.04386,-0.52193 -0.299723,-0.21704 -0.449584,-0.49093 -0.149861,-0.27905 -0.149861,-0.66145 0,-0.68213 0.496092,-1.13171 0.50126,-0.45476 1.276404,-0.45476 0.816485,0 1.312577,0.47543 0.496092,0.47542 0.496092,1.21956 h -0.909502 q 0,-0.37724 -0.253214,-0.64079 -0.253213,-0.26872 -0.645953,-0.26872 -0.403075,0 -0.635618,0.21188 -0.227376,0.2067 -0.227376,0.5581 0,0.27905 0.165364,0.44958 0.170532,0.17054 0.811318,0.44959 1.018022,0.3979 1.384924,0.78031 0.366901,0.37724 0.366901,0.96118 0,0.72863 -0.50126,1.16788 -0.501259,0.43408 -1.343582,0.43408 -0.873329,0 -1.41593,-0.50126 -0.542601,-0.50126 -0.542601,-1.27123 h 0.919838 q 0.0155,0.46508 0.284219,0.72863 0.268717,0.26355 0.754474,0.26355 0.454751,0 0.692462,-0.20154 0.23771,-0.2067 0.23771,-0.55293 z"
+           id="path3853" />
+        <path
+           d="m 61.480828,107.91046 h 3.100576 v 0.54777 h -3.694853 v -7.52407 h 0.594277 z"
+           style="font-weight:300;-inkscape-font-specification:'Roboto Condensed,  Light'"
+           id="path3855" />
+        <path
+           d="m 66.312558,108.45823 h -0.578774 v -5.59137 h 0.578774 z m -0.661456,-7.20367 q 0,-0.1757 0.09819,-0.29973 0.09818,-0.12402 0.279051,-0.12402 0.180867,0 0.279052,0.12402 0.103353,0.12403 0.103353,0.29973 0,0.1757 -0.103353,0.29972 -0.09819,0.11886 -0.279052,0.11886 -0.180867,0 -0.279051,-0.11886 -0.09819,-0.12402 -0.09819,-0.29972 z"
+           style="font-weight:300;-inkscape-font-specification:'Roboto Condensed,  Light'"
+           id="path3857" />
+        <path
+           d="m 71.717896,105.92609 q 0,1.29191 -0.454752,1.9637 -0.449583,0.67179 -1.343583,0.67179 -0.987016,0 -1.462438,-0.85266 l -0.02584,0.74931 h -0.532266 v -7.93748 h 0.568439 v 3.12642 q 0.470254,-0.88367 1.441768,-0.88367 0.904335,0 1.348751,0.64079 0.444416,0.63562 0.459919,1.90169 z m -0.573607,-0.52193 q 0,-1.06453 -0.315225,-1.57612 -0.315226,-0.5116 -1.033526,-0.5116 -0.956011,0 -1.32808,1.00769 v 2.76985 q 0.1757,0.43924 0.516763,0.68212 0.341063,0.23771 0.821653,0.23771 0.687294,0 1.007687,-0.49609 0.32556,-0.50126 0.330728,-1.55545 z"
+           style="font-weight:300;-inkscape-font-specification:'Roboto Condensed,  Light'"
+           id="path3859" />
+      </g>
+      <path
+         style="display:inline;fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 52.436339,100.38643 c 0,0 1.380379,-2.306685 3.051368,-0.0182"
+         id="path15818"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+</svg>
