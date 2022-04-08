@@ -10,3 +10,13 @@ input[type="submit"]
   background:url('button_search.svg');
   // more style
 }
+
+.searching-customer {
+  position: relative;
+}
+
+.button-search {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
