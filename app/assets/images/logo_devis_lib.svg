@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="23.6mm"
+   height="10.2mm"
+   viewBox="0 0 23.599999 10.2"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="logo devis lib.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="39.774756"
+     inkscape:cy="22.627417"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"
+     width="20mm"
+     height="10.2mm" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="fond"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.11127;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3751"
+       width="163.0018"
+       height="105.65451"
+       x="25.572662"
+       y="113.09901" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Calque 2"
+     style="display:inline">
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:0.213734;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.7477453,2.666667 c 0,0 4.4292077,-3.27985001 10.0524177,-0.15584"
+       id="path315"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\murie\Desktop\path315.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.213734;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0.42908027,9.9415973 c 0,0 0.271878,-9.78759031 9.31180773,-9.58368031 9.039929,0.2039 8.793541,6.91588031 8.793541,6.91588031 0,0 2.778249,0.27188 3.882753,1.1215 0,0 2.209005,1.6652497 0,1.6482597 l -22.00934173,0.0212 z"
+       id="path1985"
+       inkscape:export-filename="C:\Users\murie\Desktop\path315.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.213734;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 19.103673,7.8345473 c 0,0 1.835174,0.15293 2.939676,0.83263 0,0 1.376381,0.90059 -0.01699,0.90059 l -20.8496127,-0.034"
+       id="path2298"
+       inkscape:export-filename="C:\Users\murie\Desktop\path315.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.72675px;line-height:1.25;font-family:roboto;-inkscape-font-specification:roboto;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.118169"
+       x="2.3320062"
+       y="8.3717222"
+       id="text3652"
+       transform="scale(0.99784535,1.0021593)"
+       inkscape:export-filename="C:\Users\murie\Desktop\path315.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan3650"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';stroke-width:0.118169"
+         x="2.3320062"
+         y="8.3717222">Devis<tspan
+   style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light'"
+   id="tspan1835">Lib</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.213734;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 9.180141,4.576267 c 0,0 0.50977,-0.4418 1.146983,0.004"
+       id="path2655"
+       inkscape:export-filename="C:\Users\murie\Desktop\path315.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
