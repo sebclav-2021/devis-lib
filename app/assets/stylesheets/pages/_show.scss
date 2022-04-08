@@ -1,0 +1,29 @@
+.container {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.user {
+  text-align:left;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  padding: none;
+  position: fixed;
+  top: 95px;
+}
+
+.custom {
+  margin-top: 80px;
+}

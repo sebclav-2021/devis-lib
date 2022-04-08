@@ -1,22 +1,17 @@
 <br>
 <br>
-<div class="container new">
-  <div class="container title">
+<div class="new">
+  <div class="title">
     <h1>Créez un Devis</h1>
   </div>
-  <div class="container form">
+  <div class="form">
     <%= simple_form_for(@quote) do |f| %>
       <div class="form-inputs">
-        <%= f.input :due_date, label: 'Validité du devis' %>
-        <%= f.input :comment, label: 'Commentaires du poste'%>
-        <%= f.input :payment_choice, label: 'Choix de mode de paiement'%>
-        <%= f.input :price, label: 'Prix' %>
-        <%= f.input :coeff, label: 'Cote' %>
         <%= f.input :customer, collection: Customer.all%>
       </div>
 
       <div class="form-actions">
-        <%= f.submit 'Créez le Devis'%>
+        <%= f.submit 'Créer le Devis'%>
       </div>
     <% end %>
   </div>

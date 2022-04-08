@@ -1,10 +1,10 @@
 <br>
 <br>
-<div class="container new">
-  <div class="container title">
+<div class="new">
+  <div class="title">
     <h1>Créez un Client</h1>
   </div>
-  <div class="container form">
+  <div class="form">
     <%= simple_form_for(@customer) do |f| %>
       <div class="form-inputs">
         <%= f.input :name %>
@@ -14,10 +14,8 @@
       </div>
 
       <div class="form-actions">
-        <%= f.submit 'Créez le Client'%>
+        <%= f.submit 'Créer le Client'%>
       </div>
     <% end %>
   </div>
 </div>
-
-<%= link_to 'Home', root_path%>

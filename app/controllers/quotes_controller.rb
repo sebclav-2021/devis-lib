@@ -15,7 +15,7 @@ class QuotesController < ApplicationController
     @quote.user = current_user
     @quote.customer = @customer
     if @quote.save
-      redirect_to root_path
+      redirect_to quote_path(@quote)
     else
       redirect_to new_quote_path
     end

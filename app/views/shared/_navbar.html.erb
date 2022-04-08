@@ -1,11 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
 
-    <%= link_to "https://devislib.herokuapp.com/categories", class: "navbar-brand" do %>
+    <%= link_to categories_path, class: "navbar-brand" do %>
       <%= image_tag "https://api.iconify.design/ic/baseline-settings.svg?color=%23ffb800&width=40&height=40') no-repeat center center / contain;" %>
     <% end %>
 
-    <%= link_to "https://devislib.herokuapp.com/customers", class: "navbar-brand" do %>
+    <%= link_to customers_path, class: "navbar-brand" do %>
       <%= image_tag "https://api.iconify.design/ic/baseline-person-search.svg?color=%23ffb800&width=40&height=40') no-repeat center center / contain;" %>
     <% end %>
 
@@ -13,11 +13,11 @@
       <%= image_tag "https://api.iconify.design/clarity/home-solid.svg?color=%23ffb800&width=40&height=40" %>
     <% end %>
 
-        <%= link_to "https://devislib.herokuapp.com/customers/new", class: "navbar-brand" do %>
+        <%= link_to new_customer_path, class: "navbar-brand" do %>
       <%= image_tag "https://api.iconify.design/ic/baseline-person-add-alt-1.svg?color=%23ffb800&width=40&height=40') no-repeat center center / contain;" %>
     <% end %>
 
-    <%= link_to "https://devislib.herokuapp.com/quotes", class: "navbar-brand" do %>
+    <%= link_to quotes_path, class: "navbar-brand" do %>
       <%= image_tag "https://api.iconify.design/el/list-alt.svg?color=%23ffb800&width=40&height=40') no-repeat center center / contain;" %>
     <% end %>
 
