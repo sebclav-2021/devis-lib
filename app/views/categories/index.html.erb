@@ -1,35 +1,32 @@
-<div class="container list">
-  <div class="container">
+<div class="list">
+  <div>
     <h1>Vos Prestations</h1>
   </div>
   <br>
   <div class="categories">
-    <ul>
-      <div class="lists-categories">
-        <% @categories.each do |category| %>
-          <li>
-            <div class="container">
-              <h2 class="name"><%= link_to category.name, new_category_service_path(category) %>
-                               <%= form_for(@category) do |f| %>
-                                 <%= f.check_box :selected %>
-                               <% end %></h2>
-              <%= link_to category_path(category), class: 'trash',
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } do%>
-                    <i class="fa-regular fa-trash-can"></i>
-                    <% end %>
-            </div>
-          </li>
-        <% end  %>
-      </div>
-    </ul>
+    <div class="lists-categories">
+      <% @categories.each do |category| %>
+        <p>
+          <div class="category">
+            <h3 class="name"><%= form_for(@category) do |f| %>
+                                <%= f.check_box :selected %>
+                                <%= link_to category.name, new_category_service_path(category) %>
+                                  <%= link_to category_path(category),
+                                    class: 'trash',
+                                    method: :delete,
+                                    data: { confirm: "Are you sure?" } do%>
+                                    <i class="fa-regular fa-trash-can"></i>
+                                    <% end %>
+                              <% end %>
+            </h3>
+          </div>
+        </p>
+      <% end  %>
+    </div>
   </div>
 
-
-
-
-  <div class="container new">
-    <div class="container form">
+  <div class="new">
+    <div class="form">
       <%= simple_form_for(@category) do |f| %>
         <div class="form-inputs">
           <%= f.input :name %>
@@ -41,6 +38,3 @@
     </div>
   </div>
 </div>
-
-</div>
-<%= link_to 'home', root_path %>
