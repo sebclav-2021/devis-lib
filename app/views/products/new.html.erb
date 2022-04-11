@@ -1,10 +1,6 @@
-<br>
-<br>
-<div class="container new">
-  <div class="container title">
-    <h1>Créer un produit</h1>
-  </div>
-  <div class="container form">
+<h3>Créer un produit</h3>
+<div>
+  <div class="form">
     <%= simple_form_for(@product) do |f| %>
       <div class="form-inputs">
         <%= f.input :name %>
@@ -13,12 +9,8 @@
       </div>
 
       <div class="form-actions">
-        <%= f.submit 'Créez le Client'%>
+        <%= f.submit 'Créez le produit'%>
       </div>
     <% end %>
   </div>
 </div>
-
-<%= link_to 'Home', root_path%>
-
-<p>Find me in app/views/products/new.html.erb</p>
