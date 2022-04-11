@@ -16,4 +16,9 @@
         <p><%=@quote.customer.email%></p>
     </div>
   </div>
+<br>
+<br>
+  <div class="date">
+    <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
+  </div>
 </div>

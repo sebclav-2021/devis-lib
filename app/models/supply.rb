@@ -1,4 +1,4 @@
 class Supply < ApplicationRecord
-  belongs_to :product
-  belongs_to :service
+  belongs_to :product, dependent: :destroy
+  belongs_to :service, dependent: :destroy
 end
