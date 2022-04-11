@@ -1,0 +1,27 @@
+<div>
+  <h2> <%= @service.category.name %></h2>
+</div>
+
+<div>
+  <h4><%= @service.name %></h4>
+  <p> <%= @service.description %></p>
+</div>
+
+
+<div>
+  <% @service.supplies.each do |supply|%>
+    <p><%= supply.product.name %> | Quantité : <%= supply.quantity %></p>
+  <% end %>
+</div>
+<div>
+  <h3>Ajouter un produit</h3>
+  <%= form_with url: service_supplies_path(@service), method: :post do |form| %>
+    <%= form.select :product_id, Product.all.collect {|p| [ p.name, p.id ] } %>
+    <%= form.number_field :quantity %>
+    <%= form.submit "Ajouter" %>
+  <% end %>
+</div>
+<br>
+<br>
+<br>
+ <%= link_to "Créer un produit", new_product_path %>
