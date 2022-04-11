@@ -2,14 +2,15 @@
 .btn-gradient {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 200px;
+  height: 120px;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   color: black;
-  padding: 8px 24px;
+  padding: 20px;
   border-radius: 4px;
   background: linear-gradient(#167FFB, #0F60C4);
   background: #FFDC80;
@@ -17,17 +18,18 @@
 }
 
 .btn-gradient:hover {
-  color: green;
+  opacity: 0.8;
 }
 
 h1 {
   text-align: center;
-  margin: 20px;
+  margin: 10px;
 }
 
 h2 {
   text-align: center;
   margin: 20px;
+  font-size: 26px;
 }
 
 .d-block {
@@ -40,7 +42,12 @@ a {
 }
 
 #logo {
-  margin: 35px;
+  margin: 30px;
+}
+
+.contour-homepage {
+  padding-bottom: 80px;
+  background: #FFB800;
 }
 
 .logout {
