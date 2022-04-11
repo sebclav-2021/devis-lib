@@ -1,15 +1,18 @@
-<h3>Créer un produit</h3>
+  <div class="title">
+    <h1>Créer un produit</h1>
+  </div>
+
 <div>
   <div class="form">
     <%= simple_form_for(@product) do |f| %>
       <div class="form-inputs">
-        <%= f.input :name %>
-        <%= f.input :unite %>
-        <%= f.input :price %>
+        <%= f.input :name, label: "Nom de l'article / Main d'oeuvre :" %>
+        <%= f.input :unite, label: "Quantité :" %>
+        <%= f.input :price, label: "Prix :" %>
       </div>
 
       <div class="form-actions">
-        <%= f.submit 'Créez le produit'%>
+        <%= f.submit 'Créer le service'%>
       </div>
     <% end %>
   </div>
