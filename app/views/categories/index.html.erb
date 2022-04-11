@@ -8,26 +8,25 @@
       <% @categories.each do |category| %>
         <p>
           <div class="category ">
-          <div class="d-flex">
-            <h3 class="name">
-             <%= category.name %>
-            </h3>
-            <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Are you sure?" } do %>
-              <i class="fa-regular fa-trash-can"></i>
-            <% end %>
-          </div>
-          <%= simple_form_for [category, @service] do |f| %>
-            <%= f.input :name %>
-            <%= f.input :description %>
-            <%= f.input :unit %>
-            <%= f.submit %>
-            <% end %>
+            <div class="d-flex">
+              <h3 class="name">
+              <%= category.name %>
+              </h3>
+              <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i class="fa-regular fa-trash-can"></i>
+              <% end %>
+            </div>
+            <%= simple_form_for [category, @service] do |f| %>
+              <%= f.input :name %>
+              <%= f.input :description %>
+              <%= f.input :unit %>
+              <%= f.submit %>
+              <% end %>
           </div>
         </p>
       <% end  %>
     </div>
   </div>
-
   <div class="new">
     <div class="form">
       <%= simple_form_for(@category) do |f| %>
@@ -41,3 +40,8 @@
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>

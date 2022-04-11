@@ -30,7 +30,19 @@ class QuotesController < ApplicationController
     redirect_to quote_path
   end
 
+  def create_line
+    @quote = Quote.find(params[:quote_id].to_i)
+    @service = Service.find(params[:service_id].to_i)
+    @line = Line.new(quote: @quote, service: @service, quantity: params[:quantity].to_i)
+    if @line.save
+      redirect_to @quote
+    else
+      render 'show'
+    end
+  end
+
   def show
+    @categories = Category.all
   end
 
   def destroy
