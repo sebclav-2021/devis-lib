@@ -1,33 +1,39 @@
-<div>
-  <div>
-    <%= image_tag "logo_devis_lib.svg", alt: "Logo de DevisLib", width: 120, class: "mx-auto d-block", id: "logo" %>
-  </div>
-
-  <div>
-    <%= image_tag "Titre devilib.svg", alt: "Nom de l'application", width: 200, class: "mx-auto d-block" %>
-  </div>
-
-  <div>
-    <h1>Pour un devis instantané !</h1>
-  </div>
-
-  <div>
-    <%= image_tag "https://api.iconify.design/openmoji/construction-worker-medium-light-skin-tone.svg?color=%23ffb800&width=110&height=120') no-repeat center center / contain;", class: "mx-auto d-block", id: "worker" %>
-  </div>
-
-  <div>
-    <h2>Je crée un devis pour</h2>
-  </div>
-
-  <div>
-    <div class= "boutons btn btn-gradient">
-      <div><%= image_tag "rechercher_client.svg", alt: "rechercher un client", width: 30, class: "mx-auto d-block" %></div>
-      <div><%= link_to "Un client existant", customers_path %></div>
+<div class="contour-homepage">
+    <div>
+      <%= image_tag "logo_devis_lib.svg", alt: "Logo de DevisLib", width: 150, class: "mx-auto d-block", id: "logo" %>
     </div>
-  <br>
-    <div class= "boutons btn btn-gradient">
-      <%= image_tag "nouveau_client.svg", alt: "créer un nouveau client", width: 40, class: "mx-auto d-block" %>
-      <%= link_to "Un nouveau client", new_customer_path %>
+
+    <div>
+      <%= image_tag "Titre devilib.svg", alt: "Nom de l'application", width: 200, class: "mx-auto d-block" %>
     </div>
-  </div>
+
+    <div>
+      <h1>Pour un devis instantané !</h1>
+    </div>
+
+    <div>
+      <%= image_tag "https://api.iconify.design/openmoji/construction-worker-medium-light-skin-tone.svg?color=%23ffb800&width=110&height=120') no-repeat center center / contain;", class: "mx-auto d-block", id: "worker" %>
+    </div>
+
+    <div>
+      <h2>Je crée un devis pour</h2>
+    </div>
+
+    <div>
+    <%= link_to new_quote_path do %>
+      <div class= "boutons btn btn-gradient">
+        <div><%= image_tag "rechercher_client.svg", alt: "rechercher un client", width: 50, class: "mx-auto d-block" %></div>
+        Un client existant
+      </div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= link_to new_customer_path do %>
+      <div class= "boutons btn btn-gradient">
+        <div><%= image_tag "nouveau_client.svg", alt: "créer un nouveau client", width: 60, class: "mx-auto d-block" %></div>
+        Un nouveau client
+      </div>
+      <% end %>
+    </div>
 </div>
