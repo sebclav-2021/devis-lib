@@ -12,8 +12,8 @@
           params[:query],
           class: "form-control",
           placeholder: "Rechercher un client" %>
-        <div class="button-search">
-          <%= image_submit_tag("button_search.svg") %>
+        <div class="search">
+          <%= image_submit_tag("search.svg") %>
         </div>
       <% end %>
     </div>
@@ -35,6 +35,6 @@
     </div>
   </div>
   <div>
-    <%= link_to 'Créer un devis', new_quote_path %>
+    <%# <%= link_to 'Continuer', customer_path(@customer) %>
   </div>
 </div>
