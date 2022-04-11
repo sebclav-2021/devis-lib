@@ -30,6 +30,7 @@ class CustomersController < ApplicationController
   end
 
   def show
+    @quote = Quote.new
   end
 
   def destroy
