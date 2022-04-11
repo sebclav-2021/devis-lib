@@ -6,6 +6,7 @@ class QuotesController < ApplicationController
   end
 
   def new
+    @customers = Customer.all
     @quote = Quote.new
   end
 
