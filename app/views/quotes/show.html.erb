@@ -21,6 +21,10 @@
   <div class="date">
     <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
   </div>
+<br>
+<br>
+
+<%= link_to quote_path(@quote), target="_blank"  %>
 
   <% @categories.each do |category| %>
     <h2><%= category %></h2>

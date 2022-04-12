@@ -42,6 +42,12 @@ class QuotesController < ApplicationController
   end
 
   def show
+    # @category = Category.find(params[:line][:service_id][:category_id].to_i)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "show"  # Excluding ".pdf" extension.
+        
     @categories = @quote.lines.map do |line|
       line.service.category.name
     end.uniq

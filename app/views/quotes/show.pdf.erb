@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <style>
+    /* bouton avec target blank */
+    /*  hsfsjefh_path+.pdf */
+  </style>
+  <body onload='number_pages'>
+    <div id="header">
+      <%= wicked_pdf_image_tag 'mysite.jpg' %>
+    </div>
+    <div id="content">
+<br>
+<br>
+<div class="container" >
+  <div class="user">
+      <p><%=current_user.name%></p>
+      <p><%=current_user.address%></p>
+      <p>Email: <%=current_user.email%></p>
+      <p>Téléphone: <%=current_user.phone%></p>
+      <p>N°Siret: <%=current_user.siret%></p>
+  </div>
+  <div class="customer-container">
+    <div class="customer">
+        <p><%=@quote.customer.name%></p>
+        <p><%=@quote.customer.address%></p>
+        <p><%=@quote.customer.phone%></p>
+        <p><%=@quote.customer.email%></p>
+    </div>
+  </div>
+<br>
+<br>
+  <div class="date">
+    <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
+  </div>
+<br>
+<br>
+
+
+
+  <div>
+    <% @quote.lines.each do |line|%>
+      <p><%= line.service.name %>
+      <p><%= line.service.description %><%= line.quantity %></p>
+    <% end %>
+  </div>
+
+
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>
