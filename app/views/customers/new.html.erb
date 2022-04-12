@@ -10,11 +10,13 @@
         <%= f.input :address, label: "Adresse :" %>
         <%= f.input :email, label: "E-mail :" %>
         <%= f.input :phone, label: "Téléphone :" %>
+        <%= hidden_field_tag "from_navbar",  @from_navbar %>
       </div>
 
       <div class="form-actions">
         <%= f.submit 'Créer mon client'%>
       </div>
     <% end %>
+
   </div>
 </div>
