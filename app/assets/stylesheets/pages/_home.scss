@@ -12,18 +12,12 @@
   color: black;
   padding: 20px;
   border-radius: 4px;
-  background: linear-gradient(#167FFB, #0F60C4);
   background: #FFDC80;
   box-shadow: 0px 4px 4px #ffae00, 0px 4px 4px #ffae00;
 }
 
 .btn-gradient:hover {
   opacity: 0.8;
-}
-
-h1 {
-  text-align: center;
-  margin: 10px;
 }
 
 h2 {
@@ -39,15 +33,6 @@ h2 {
 a {
   text-decoration: none;
   color: black;
-}
-
-#logo {
-  margin: 30px;
-}
-
-.contour-homepage {
-  padding-bottom: 80px;
-  background: #FFB800;
 }
 
 .logout {

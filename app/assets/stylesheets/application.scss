@@ -13,6 +13,8 @@
 @import "pages/index";
 @import "pages/show";
 @import "pages/categories/index";
+@import "pages/customers/new";
+
 @import "pages/users";
 
 
@@ -22,4 +24,15 @@ body {
 
 body, h1, h2, h3, p {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.contour-homepage {
+  padding-bottom: 80px;
+  padding-top: 6px;
+  background: #FFB800;
+}
+
+.title {
+  text-align: center;
+  margin: 10px;
 }

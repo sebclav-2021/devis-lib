@@ -1,21 +1,22 @@
-<br>
-<br>
+<div class="title">
+  <h1>Créer un client</h1>
+</div>
+
 <div class="new">
-  <div class="title">
-    <h1>Créez un Client</h1>
-  </div>
   <div class="form">
     <%= simple_form_for(@customer) do |f| %>
       <div class="form-inputs">
-        <%= f.input :name %>
-        <%= f.input :address %>
-        <%= f.input :email %>
-        <%= f.input :phone %>
+        <%= f.input :name, label: "Prénom et nom :" %>
+        <%= f.input :address, label: "Adresse :" %>
+        <%= f.input :email, label: "E-mail :" %>
+        <%= f.input :phone, label: "Téléphone :" %>
+        <%= hidden_field_tag "from_navbar",  @from_navbar %>
       </div>
 
       <div class="form-actions">
-        <%= f.submit 'Créer le Client'%>
+        <%= f.submit 'Créer mon client'%>
       </div>
     <% end %>
+
   </div>
 </div>

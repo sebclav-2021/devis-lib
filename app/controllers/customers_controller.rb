@@ -9,15 +9,33 @@ class CustomersController < ApplicationController
   end
 
   def new
+    @quote = Quote.new
     @customer = Customer.new
+    @from_navbar = params[:from_navbar]
   end
 
   def create
     @customer = Customer.new(customer_params)
-    if @customer.save
-      redirect_to customers_path
+    @from_navbar = params[:from_navbar]
+    if @from_navbar != "true"
+      if @customer.save
+        @quote = Quote.new
+        @quote.user = current_user
+        @quote.customer = @customer
+        if @quote.save
+          redirect_to quote_path(@quote)
+        else
+          redirect_to new_quote_path
+        end
+      else
+        redirect_to new_customer_path
+      end
     else
-      redirect_to new_customer_path
+      if @customer.save
+        redirect_to customers_path
+      else
+        redirect_to new_customer_path
+      end      
     end
   end
 
