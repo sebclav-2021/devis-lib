@@ -3,14 +3,18 @@
 </div>
 
 <div>
-  <h4><%= @service.name %></h4>
-  <p> <%= @service.description %></p>
+  <h4><%= @service.name %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i class="fa-regular fa-trash-can"></i>
+              <% end %></h4>
+  <h5> <%= @service.description %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i class="fa-regular fa-trash-can"></i>
+              <% end %></h5>
 </div>
 
 
 <div>
   <% @service.supplies.each do |supply|%>
-    <p><%= supply.product.name %> | Quantité : <%= supply.quantity %></p>
+    <p><%= supply.product.name %></p>
   <% end %>
 </div>
 <div>
@@ -24,4 +28,4 @@
 <br>
 <br>
 <br>
- <%= link_to "Créer un produit", new_product_path %>
+ <!-- <%= link_to "Créer un produit", new_product_path %> -->

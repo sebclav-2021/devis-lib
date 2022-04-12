@@ -70,4 +70,4 @@ Product.create!(name: "Siphon extra-plat, sortie verticale, H.11 cm x l.14 cm", 
 Product.create!(name: "Siphon de cour en pvc", unite: "Pièce", price: "25.50", workforce: false)
 Product.create!(name: "Siphon sol ABS gris", unite: "Pièce", price: "32.10", workforce: false)
 Product.create!(name: "Siphonnette grille+ cadre inox 10x10", unite: "Pièce", price: "22.20", workforce: false)
-Product.create!(name: "Main d'œuvre", unite: "Forfait", price: "50.00", workforce: false)
+Product.create!(name: "Main d'oeuvre", unite: "Forfait", price: "50.00", workforce: false)

@@ -42,7 +42,7 @@ class QuotesController < ApplicationController
   end
 
   def show
-    @categories = Category.all
+    # @category = Category.find(params[:line][:service_id][:category_id].to_i)
   end
 
   def destroy
