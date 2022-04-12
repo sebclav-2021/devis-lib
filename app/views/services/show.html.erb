@@ -14,7 +14,7 @@
 
 <div>
   <% @service.supplies.each do |supply|%>
-    <p><%= supply.product.name %></p>
+    <p><%= supply.product.name %> <%= supply.product.price %> €</p>
   <% end %>
 </div>
 <div>
