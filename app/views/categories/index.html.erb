@@ -38,8 +38,8 @@
           <%= simple_form_for [category, @service] do |f| %>
             <%= f.input :name, label: "Nom", placeholder: "Nom du service" %>
             <%= f.input :description, label: "Description", placeholder: "Description du service" %>
-            <%= f.input :unit, label: "Unité", placeholder: "m², litres, heures..." %>
-            <%= f.submit %>
+            <%= f.input :unit, label: "Unité", placeholder: "m², litres, forfait..." %>
+            <%= f.submit "Créer un service" %>
             <% end %>
           </div>
         </p>

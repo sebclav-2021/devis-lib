@@ -14,7 +14,7 @@
 
 <div>
   <% @service.supplies.each do |supply|%>
-    <p><%= supply.product.name %></p>
+    <p><%= supply.product.name %> <%= supply.product.price %> €</p>
   <% end %>
 </div>
 
@@ -28,6 +28,11 @@
   <% end %>
 </div>
 
+  <div>
+      <%= link_to 'Retour', categories_path, class: 'back' %>
+  </div>
 
-
+<br>
+<br>
+<br>
  <!-- <%= link_to "Créer un produit", new_product_path %> -->
