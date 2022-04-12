@@ -21,4 +21,23 @@
   <div class="date">
     <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
   </div>
+<br>
+<br>
+
+
+
+  <div>
+    <% @quote.lines.each do |line|%>
+      <p><%= line.service.name %>
+      <p><%= line.service.description %><%= line.quantity %></p>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form_with url: quote_lines_path(@quote), method: :post do |form| %>
+    <%= form.select :service_id, Service.all.collect {|p| [ p.name, p.id ] } %>
+    <%= form.number_field :quantity %>
+    <%= form.submit "Ajouter" %>
+    <% end %>
+  </div>
 </div>
