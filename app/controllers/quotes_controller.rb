@@ -43,6 +43,12 @@ class QuotesController < ApplicationController
 
   def show
     # @category = Category.find(params[:line][:service_id][:category_id].to_i)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "show"  # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def destroy

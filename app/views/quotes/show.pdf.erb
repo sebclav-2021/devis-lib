@@ -1,6 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <style>
+    /* bouton avec target blank */
+    /*  hsfsjefh_path+.pdf */
+  </style>
+  <body onload='number_pages'>
+    <div id="header">
+      <%= wicked_pdf_image_tag 'mysite.jpg' %>
+    </div>
+    <div id="content">
 <br>
 <br>
-<div class="container">
+<div class="container" >
   <div class="user">
       <p><%=current_user.name%></p>
       <p><%=current_user.address%></p>
@@ -24,7 +40,7 @@
 <br>
 <br>
 
-<%= link_to quote_path(@quote), target="_blank"  %>
+
 
   <div>
     <% @quote.lines.each do |line|%>
@@ -33,11 +49,10 @@
     <% end %>
   </div>
 
-  <div>
-    <%= form_with url: quote_lines_path(@quote), method: :post do |form| %>
-    <%= form.select :service_id, Service.all.collect {|p| [ p.name, p.id ] } %>
-    <%= form.number_field :quantity %>
-    <%= form.submit "Ajouter" %>
-    <% end %>
+
   </div>
 </div>
+
+    </div>
+  </body>
+</html>
