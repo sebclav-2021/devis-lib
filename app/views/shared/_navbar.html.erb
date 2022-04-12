@@ -13,7 +13,7 @@
       <%= image_tag "https://api.iconify.design/clarity/home-solid.svg?color=%23ffb800&width=40&height=40" %>
     <% end %>
 
-        <%= link_to new_customer_path, class: "navbar-brand" do %>
+        <%= link_to new_customer_path(from_navbar: true), class: "navbar-brand" do %>
       <%= image_tag "https://api.iconify.design/ic/baseline-person-add-alt-1.svg?color=%23ffb800&width=40&height=40') no-repeat center center / contain;" %>
     <% end %>
 

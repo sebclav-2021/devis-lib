@@ -20,14 +20,16 @@
     <div class="customers">
       <ul class="custom">
         <div class="lists-customer">
+          <% @customers = @customers.sort { |a, b| a.name <=> b.name } %>
           <% @customers.each do |customer| %>
             <div>
-              <h3 class="name"><%= link_to customer.name, customer %>
+              <h3 class="name">
               <%= link_to customer_path(customer), class: 'trash',
                 method: :delete,
                 data: { confirm: "Are you sure?" } do%>
-                <i class="fa-regular fa-trash-can"></i>
-              <% end %></h3>
+                  <i class="fa-regular fa-trash-can"></i>
+                  <%= link_to customer.name, customer %>
+                <% end %></h3>
             </div>
           <% end  %>
         </div>

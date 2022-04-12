@@ -11,11 +11,13 @@
         <%= f.input :address %>
         <%= f.input :email %>
         <%= f.input :phone %>
+        <%= hidden_field_tag "from_navbar",  @from_navbar %>
       </div>
 
       <div class="form-actions">
         <%= f.submit 'Créer le Client'%>
       </div>
     <% end %>
+
   </div>
 </div>
