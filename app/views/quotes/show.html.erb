@@ -27,10 +27,10 @@
 
   <div>
     <% @lines_to_display[category].each do |line| %>
-      <p><%= line.service.name %></p>
-      <p><%= line.service.description %><%= line.quantity %></p>
+      <p><%= line.service.name %> Quantité : <%= line.quantity %> <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %></p>
+      <p><%= line.service.description %> </p>
       <p><%= line.service.supplies.map(&:product).map(&:name).join(', ') %></p>
-      <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %> €/ <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %></p>
+      <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %> €</p>
     <% end %>
   </div>
   <% end %>

@@ -42,7 +42,6 @@ class QuotesController < ApplicationController
   end
 
   def show
-    @category_array = []
     @categories = @quote.lines.map do |line|
       line.service.category.name
     end.uniq
