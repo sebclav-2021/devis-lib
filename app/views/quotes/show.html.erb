@@ -21,17 +21,19 @@
   <div class="date">
     <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
   </div>
-<br>
-<br>
 
-
+  <% @categories.each do |category| %>
+    <h2><%= category %></h2>
 
   <div>
-    <% @quote.lines.each do |line|%>
-      <p><%= line.service.name %>
-      <p><%= line.service.description %><%= line.quantity %></p>
+    <% @lines_to_display[category].each do |line| %>
+      <p><%= line.service.name %> Quantité : <%= line.quantity %> <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %></p>
+      <p><%= line.service.description %> </p>
+      <p><%= line.service.supplies.map(&:product).map(&:name).join(', ') %></p>
+      <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %> €</p>
     <% end %>
   </div>
+  <% end %>
 
   <div>
     <%= form_with url: quote_lines_path(@quote), method: :post do |form| %>
