@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :quotes, dependent: :destroy
   has_many :services, dependent: :destroy
-  has_many :customers, through: :quotes
+  has_many :customers, through: :quotes, dependent: :destroy
 end
