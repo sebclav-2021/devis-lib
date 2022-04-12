@@ -4,7 +4,7 @@
 
 <div class="customers-page">
   <div>
-    <div class="searching-customer">
+    <div class="searching-customer form-control-sm">
       <%= form_tag customers_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
@@ -29,7 +29,7 @@
                 <%= link_to customer.name, customer %>
               <% end %></h3>
             </div>
-          <% end  %>
+          <% end %>
         </div>
       </ul>
     </div>
