@@ -1,36 +1,29 @@
-<br>
-<br>
-<div>
-  <div>
-    <h1>Détail d'un client</h1>
+  <div class="title">
+    <h1>Coordonnées du client</h1>
   </div>
+
+<div>
   <div class="form">
     <%= simple_form_for(@customer) do |f| %>
       <div class="form-inputs">
-        <%= f.input :name %>
-        <%= f.input :address %>
-        <%= f.input :email %>
-        <%= f.input :phone %>
+        <%= f.input :name, label: "Prénom et Nom :" %>
+        <%= f.input :address, label: "Adresse :" %>
+        <%= f.input :email, label: "E-mail :" %>
+        <%= f.input :phone, label: "Téléphone :" %>
       </div>
 
       <div class="form-actions">
         <div class="form">
-         
+
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
  <%= simple_form_for(@quote) do |f| %>
               <%= f.hidden_field :customer, value: @customer.id %>
             <div class="form-actions">
               <%= f.submit 'Continuer'%>
             </div>
-          <% end %>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+  <% end %>

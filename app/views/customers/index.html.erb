@@ -1,17 +1,15 @@
-
+  <div class="title">
+    <h1>Rechercher un client</h1>
+  </div>
 
 <div class="customers-page">
-  <div class="list">
-    <h1>Mes Clients</h1>
-  </div>
-  <br>
   <div>
     <div class="searching-customer">
       <%= form_tag customers_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Rechercher un client" %>
+          placeholder: "Saisir le nom du client" %>
         <div class="search">
           <%= image_submit_tag("search.svg") %>
         </div>
@@ -26,10 +24,10 @@
               <h3 class="name">
               <%= link_to customer_path(customer), class: 'trash',
                 method: :delete,
-                data: { confirm: "Are you sure?" } do%>
-                  <i class="fa-regular fa-trash-can"></i>
-                  <%= link_to customer.name, customer %>
-                <% end %></h3>
+                data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce client ?" } do%>
+                <i class="fa-regular fa-trash-can"></i>
+                <%= link_to customer.name, customer %>
+              <% end %></h3>
             </div>
           <% end  %>
         </div>
