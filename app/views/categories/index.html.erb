@@ -1,41 +1,49 @@
+
 <div class="title">
-  <h1>Mes prestations</h1>
-</div>
-<br>
-<div class="categories">
-  <div class="lists-categories">
-    <% @categories.each do |category| %>
-      <p>
-        <div class="category ">
-        <div class="d-flex">
-          <h3 class="name">
-            <%= category.name %>
-          </h3>
-          <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer cette prestation ?" } do %>
-            <i class="fa-regular fa-trash-can"></i>
-          <% end %>
-        </div>
-        <%= simple_form_for [category, @service] do |f| %>
-          <%= f.input :name, label: "Nom" %>
-          <%= f.input :description, label: "Description" %>
-          <%= f.input :unit, label: "Unité" %>
-          <%= f.submit %>
-          <% end %>
-        </div>
-      </p>
-    <% end %>
-  </div>
+  <h1>Gérer mes prestations</h1>
 </div>
 
-<div class="new">
-  <div class="form">
-    <%= simple_form_for(@category) do |f| %>
-      <div class="form-inputs">
-        <%= f.input :name, label: "Nom" %>
-      </div>
-      <div class="form-actions">
-        <%= f.submit 'Valider'%>
-      </div>
-    <% end %>
+<div class="contour-homepage">
+  <div class="new">
+    <h2>Créer une prestation</h2>
+    <div class="form-control-sm">
+      <%= simple_form_for(@category) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :name, label: "Nom", placeholder: "Nom de la prestation" %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit 'Valider'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+  <div class="categories">
+    <h2>Détailler mes prestations</h2>
+    <div class="lists-categories">
+      <% @categories.each do |category| %>
+        <p>
+          <div class="form-control-sm">
+          <div class="d-flex">
+            <h3 class="name">
+              <%= category.name.capitalize %>
+            </h3>
+            <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer cette prestation ?" } do %>
+              <i class="fa-regular fa-trash-can"></i>
+            <% end %>
+          </div>
+          <%= simple_form_for [category, @service] do |f| %>
+            <%= f.input :name, label: "Nom", placeholder: "Nom du service" %>
+            <%= f.input :description, label: "Description", placeholder: "Description du service" %>
+            <%= f.input :unit, label: "Unité", placeholder: "m², litres, heures..." %>
+            <%= f.submit %>
+            <% end %>
+          </div>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>

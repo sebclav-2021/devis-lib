@@ -3,10 +3,10 @@
 </div>
 
 <div>
-  <h4><%= @service.name %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Are you sure?" } do %>
+  <h4><%= @service.name %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer le nom de ce service ?" } do %>
                 <i class="fa-regular fa-trash-can"></i>
               <% end %></h4>
-  <h5> <%= @service.description %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Are you sure?" } do %>
+  <h5> <%= @service.description %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer la description associée à ce service ?" } do %>
                 <i class="fa-regular fa-trash-can"></i>
               <% end %></h5>
 </div>
@@ -17,15 +17,17 @@
     <p><%= supply.product.name %></p>
   <% end %>
 </div>
-<div>
+
+<div class="form-control-sm">
   <h3>Ajouter un produit</h3>
   <%= form_with url: service_supplies_path(@service), method: :post do |form| %>
     <%= form.select :product_id, Product.all.collect {|p| [ p.name, p.id ] } %>
     <%= form.number_field :quantity %>
+    <br>
     <%= form.submit "Ajouter" %>
   <% end %>
 </div>
-<br>
-<br>
-<br>
+
+
+
  <!-- <%= link_to "Créer un produit", new_product_path %> -->
