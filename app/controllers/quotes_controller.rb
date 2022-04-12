@@ -47,6 +47,16 @@ class QuotesController < ApplicationController
       format.html
       format.pdf do
         render pdf: "show"  # Excluding ".pdf" extension.
+        
+    @categories = @quote.lines.map do |line|
+      line.service.category.name
+    end.uniq
+
+    @lines_to_display = {}
+
+    @categories.each do |cat|
+      @lines_to_display[cat] = @quote.lines.select do |line|
+        line.service.category.name == cat
       end
     end
   end
