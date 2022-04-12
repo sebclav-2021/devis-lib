@@ -1,13 +1,13 @@
 <div class="contour-homepage">
     <div>
-      <%= image_tag "logo_devis_lib.svg", alt: "Logo de DevisLib", width: 150, class: "mx-auto d-block", id: "logo" %>
+      <%= image_tag "logo_devis_lib.svg", alt: "Logo de DevisLib", width: 150, class: "mx-auto d-block" %>
     </div>
 
     <div>
       <%= image_tag "Titre devilib.svg", alt: "Nom de l'application", width: 200, class: "mx-auto d-block" %>
     </div>
 
-    <div>
+    <div class="title">
       <h1>Pour un devis instantané !</h1>
     </div>
 
@@ -20,7 +20,7 @@
     </div>
 
     <div>
-    <%= link_to new_quote_path do %>
+    <%= link_to customers_path do %>
       <div class= "boutons btn btn-gradient">
         <div><%= image_tag "rechercher_client.svg", alt: "rechercher un client", width: 50, class: "mx-auto d-block" %></div>
         Un client existant

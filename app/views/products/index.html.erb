@@ -1,28 +1,20 @@
-<div class="list">
-  <div>
-    <h1>Mes Produits</h1>
-  </div>
-  <br>
-
-  <div class="customers">
-    <ul class="custom">
-      <div class="lists-customer">
-        <% @products.each do |product| %>
-          <div>
-            <h3 class="name"><%= product.name %>
-            <%= link_to product_path(product), class: 'trash',
-              method: :delete,
-              data: { confirm: "Are you sure?" } do%>
-              <i class="fa-regular fa-trash-can"></i>
-            <% end %></h3>
-          </div>
-        <% end  %>
-      </div>
-    </ul>
-  </div>
+<div class="title">
+    <h1>Mes services</h1>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<div class="customers">
+  <ul class="custom">
+    <div class="lists-customer">
+      <% @products.each do |product| %>
+        <div>
+          <h3 class="name"><%= product.name %>
+          <%= link_to product_path(product), class: 'trash',
+            method: :delete,
+            data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce service ?" } do%>
+            <i class="fa-regular fa-trash-can"></i>
+          <% end %></h3>
+        </div>
+      <% end %>
+    </div>
+  </ul>
+</div>

@@ -38,6 +38,6 @@
     <%= form.select :service_id, Service.all.collect {|p| [ p.name, p.id ] } %>
     <%= form.number_field :quantity %>
     <%= form.submit "Ajouter" %>
-  <% end %>
+    <% end %>
   </div>
 </div>
