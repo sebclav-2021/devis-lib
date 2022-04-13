@@ -47,6 +47,8 @@ class QuotesController < ApplicationController
       format.html
       format.pdf do
         render pdf: "show"  # Excluding ".pdf" extension.
+      end
+    end
         
     @categories = @quote.lines.map do |line|
       line.service.category.name
