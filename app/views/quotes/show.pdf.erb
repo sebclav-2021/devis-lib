@@ -41,7 +41,7 @@
     <div id="header">
       <%= wicked_pdf_image_tag 'mysite.jpg' %>
     </div>
-        
+
     <div id="content">
       <div class="container">
         <div class="user">
@@ -68,6 +68,7 @@
         <br>
 
         <div>
+          <% @prices = [] %>
           <% @categories.each do |category| %>
             <h2><%= category %></h2>
 
@@ -77,9 +78,15 @@
                 <p><%= line.service.description %> </p>
                 <p><%= line.service.supplies.map(&:product).map(&:name).join(', ') %></p>
                 <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %> €</p>
+                <% @prices << line.service.supplies.map(&:product).map(&:price).join(', ')%>
               <% end %>
             </div>
           <% end %>
+        </div>
+        <div>
+          <% @sum = 0 %>
+          <% @prices.each { |a| @sum+=a.to_i }  %>
+          <p> Total : <%= @sum %> €</p>
         </div>
       </div>
     </div>
