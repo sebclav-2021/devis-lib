@@ -17,19 +17,14 @@
         display: flex;
         flex-direction: column;
         width: 50%;
-        p {
-          margin: 0;
-        }
+
       }
 
       .customer {
         text-align: left;
         display: flex;
         flex-direction: column;
-        width: 50%;
-        p {
-          margin: 0;
-        }
+        text-align: right;
       }
 
       .custom {
@@ -39,6 +34,7 @@
       .customer-container {
         display: flex;
         justify-content: flex-end;
+
       }
     </style>
   </head>
@@ -73,7 +69,7 @@
         <br>
         <br>
 
-        
+        <div>
           <% @categories.each do |category| %>
             <h2><%= category %></h2>
 
@@ -85,14 +81,6 @@
                 <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %> €</p>
               <% end %>
             </div>
-          <% end %>
-        
-
-        <div>
-          <%= form_with url: quote_lines_path(@quote), method: :post do |form| %>
-            <%= form.select :service_id, Service.all.collect {|p| [ p.name, p.id ] } %>
-            <%= form.number_field :quantity %>
-            <%= form.submit "Ajouter" %>
           <% end %>
         </div>
       </div>
