@@ -1,4 +1,3 @@
-
 <div class="title">
   <h1>Gérer mes prestations</h1>
 </div>
@@ -22,25 +21,28 @@
 
 
   <div class="categories">
-    <h2>Détailler mes prestations</h2>
+    <h2>Personnaliser mes prestations</h2>
     <div class="lists-categories">
       <% @categories.each do |category| %>
         <p>
-          <div class="form-control-sm">
-          <div class="d-flex">
-            <h3 class="name">
-              <%= category.name.capitalize %>
-            </h3>
-            <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer cette prestation ?" } do %>
-              <i class="fa-regular fa-trash-can"></i>
-            <% end %>
-          </div>
-          <%= simple_form_for [category, @service] do |f| %>
-            <%= f.input :name, label: "Nom", placeholder: "Nom du service" %>
-            <%= f.input :description, label: "Description", placeholder: "Description du service" %>
-            <%= f.input :unit, label: "Unité", placeholder: "m², litres, forfait..." %>
-            <%= f.submit "Créer un service" %>
-            <% end %>
+          <div class="form-control-sm" data-controller="form-service">
+            <div class="d-flex">
+              <h3 class="name">
+                <%= category.name.capitalize %>
+              </h3>
+              <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer cette prestation ?" } do %>
+                <i class="fa-regular fa-trash-can"></i>
+              <% end %>
+                <i class="fa-solid fa-plus my-plus" data-form-service-target="plus" data-action="click->form-service#displayForm"></i>
+            </div>
+            <div class="form-inputs d-none" data-form-service-target="form">
+              <%= simple_form_for [category, @service] do |f| %>
+                <%= f.input :name, label: "Nom", placeholder: "Nom du service" %>
+                <%= f.input :description, label: "Description", placeholder: "Description du service" %>
+                <%= f.input :unit, label: "Unité", placeholder: "m², litres, forfait..." %>
+                <%= f.submit "Créer un service" %>
+              <% end %>
+            </div>
           </div>
         </p>
       <% end %>

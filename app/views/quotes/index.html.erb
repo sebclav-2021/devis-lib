@@ -2,21 +2,24 @@
   <h1>Mes Devis</h1>
 </div>
 
-<div>
-  <ul>
-    <div class="quotes">
-      <% @quotes.each do |quote| %>
-        <li>
-          <div>
-            <h2 class="name"><%= link_to "devis n°: #{quote.id}", quote %>
-            <%= link_to quote_path(quote), class: 'trash',
-                method: :delete,
-                data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce devis ?" } do%>
-                <i class="fa-regular fa-trash-can"></i>
+<div class="contour">
+  <div class="customers-page">
+    <div>
+      <ul>
+        <div class="quotes">
+          <% @quotes.each do |quote| %>
+              <div>
+                <h2 class="name">
+                <%= link_to quote_path(quote), class: 'trash',
+                    method: :delete,
+                    data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce devis ?" } do%>
+                    <i class="fa-regular fa-trash-can"></i>
+                    <%= link_to "#{quote.customer.name} - Devis n° #{quote.id}", quote %>
                 <% end %></h2>
-          </div>
-        </li>
-      <% end  %>
+              </div>
+          <% end %>
+        </div>
+      </ul>
     </div>
-  </ul>
+  </div>
 </div>
