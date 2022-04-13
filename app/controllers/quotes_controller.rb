@@ -43,13 +43,7 @@ class QuotesController < ApplicationController
 
   def show
     # @category = Category.find(params[:line][:service_id][:category_id].to_i)
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf: "show"  # Excluding ".pdf" extension.
-      end
-    end
-        
+       
     @categories = @quote.lines.map do |line|
       line.service.category.name
     end.uniq
@@ -59,6 +53,13 @@ class QuotesController < ApplicationController
     @categories.each do |cat|
       @lines_to_display[cat] = @quote.lines.select do |line|
         line.service.category.name == cat
+      end
+    end
+    
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "show"  # Excluding ".pdf" extension.
       end
     end
   end
