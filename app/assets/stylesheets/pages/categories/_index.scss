@@ -1,3 +1,31 @@
 .form-inputs {
-  width: 250px;
+ /*  width: 250px; */
+}
+
+.icons-container {
+  font-size: 20px;
+}
+
+.category-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trash {
+  font-size: 22px;
+}
+
+.line-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.grey-line {
+  content: "";
+  height: 1px;
+  width: 70%;
+  background-color: rgba(37, 37, 37, 0.9);
+  position: absolute;
 }
