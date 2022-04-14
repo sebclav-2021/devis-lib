@@ -41,3 +41,30 @@ input[type="submit"]
   box-shadow: 0px 4px 4px #FFAE00, 0px 4px 4px #FFAE00;
   border: none;
 }
+/** button on white background **/
+.pdf-button {
+  width: 110px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  background: #FFDC80;
+  box-shadow: 0px 4px 4px #ffdb80e8, 0px 4px 4px #ffdb80e8;
+  border: none;
+}
+
+#pdf-submit {
+  width: 110px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  padding-top: 4px;
+  padding-bottom: 0;
+  border-radius: 4px;
+  background: #FFDC80;
+  box-shadow: 0px 4px 4px #ffdb80e8, 0px 4px 4px #ffdb80e8;
+  border: none;
+}

@@ -24,7 +24,7 @@
     <br>
 
     <div>
-      <%= link_to "Générer pdf", quote_path(@quote)+".pdf", target: "_blank"  %>
+      <%= link_to "Générer pdf", quote_path(@quote)+".pdf", target: "_blank", class: "pdf-button"  %>
     </div>
 
     <div>
@@ -59,7 +59,7 @@
       <%= form_with url: quote_lines_path(@quote), method: :post do |form| %>
       <%= form.select :service_id, Service.all.collect {|p| [ p.name, p.id ] } %>
       <%= form.number_field :quantity %>
-      <%= form.submit "Ajouter" %>
+      <%= form.submit "Ajouter", id: "pdf-submit"%>
       <% end %>
     </div>
   </div>
