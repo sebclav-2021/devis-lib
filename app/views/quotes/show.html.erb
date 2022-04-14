@@ -47,7 +47,12 @@
     <div>
       <% @sum = 0 %>
       <% @prices.each { |a| @sum+=a.to_i }  %>
-      <p> Total : <%= @sum %> €</p>
+      <p> <strong>Total :</strong> <%= @sum %> €</p>
+    </div>
+
+    <div>
+      <p>Accompte : 30%</p>
+      <p>Validité du devis : 3 mois</p>
     </div>
 
     <div>
