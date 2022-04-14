@@ -2,6 +2,19 @@
   <h1>Mes Devis</h1>
 </div>
 
+<div class="searching-customer form-control-lg">
+  <%= form_tag quotes_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Rechercher un devis" %>
+    <div class="search">
+      <%= image_submit_tag("search.svg") %>
+    </div>
+  <% end %>
+</div>
+<br>
+
 <div class="contour">
   <div class="quotes-container">
     <% @quotes = @quotes.sort { |a, b| a.customer.name <=> b.customer.name } %>
@@ -12,7 +25,7 @@
               data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce devis ?" } do%>
               <i class="fa-regular fa-trash-can"></i>
               <%= link_to "#{quote.customer.name} - Devis n° #{quote.id}", quote %>
-          <% end %></h3>
+              <% end %></h3>
     <% end %>
   </div>
 </div>

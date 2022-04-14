@@ -1,0 +1,23 @@
+.bt-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-service {
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+}
+
+.submit-service {
+  display: inline-block;
+  width: 48%;
+}
+
+.container-product {
+  padding: 0.25rem 0.5rem;
+}
+
+#product_id {
+  max-width: 96vw;
+}

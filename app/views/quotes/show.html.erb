@@ -34,7 +34,7 @@
 
       <div>
         <% @lines_to_display[category].each do |line| %>
-          <h3><%= line.service.name %> | Quantité : <%= line.quantity %> | Unité : <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %> </h3>
+          <h3><%= line.service.name %> | Quantité : <%= line.quantity %> | <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %> </h3>
           <p style="padding:0 0 0 20px;"><%= line.service.description %> </p>
           <p style="padding:0 0 0 30px;"><%= line.service.supplies.map(&:product).map(&:name).join(', ') %>  |  Coût : <%= line.service.supplies.map(&:product).map(&:price).join(', ') %>€</p>
           <% @prices << ((line.service.supplies.map(&:product).map(&:price).join(', ')).to_i * (line.quantity))%>

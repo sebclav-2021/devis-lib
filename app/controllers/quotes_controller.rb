@@ -2,7 +2,11 @@ class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   def index
-    @quotes = Quote.all
+    if params[:query].present?
+      @quotes = Quote.search(params[:query])
+    else
+      @quotes = Quote.all
+    end
   end
 
   def new
@@ -43,7 +47,7 @@ class QuotesController < ApplicationController
 
   def show
     # @category = Category.find(params[:line][:service_id][:category_id].to_i)
-       
+
     @categories = @quote.lines.map do |line|
       line.service.category.name
     end.uniq
@@ -55,11 +59,11 @@ class QuotesController < ApplicationController
         line.service.category.name == cat
       end
     end
-    
+
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "show"  # Excluding ".pdf" extension.
+        render pdf: "Devis-Luigi-Bros"  # Excluding ".pdf" extension.
       end
     end
   end
