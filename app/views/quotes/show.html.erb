@@ -28,18 +28,31 @@
     </div>
 
     <div>
+      <% @prices = [] %>
       <% @categories.each do |category| %>
         <h2><%= category %></h2>
-      
+
       <div>
         <% @lines_to_display[category].each do |line| %>
           <p><%= line.service.name %> Quantité : <%= line.quantity %> <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %></p>
           <p><%= line.service.description %> </p>
           <p><%= line.service.supplies.map(&:product).map(&:name).join(', ') %></p>
-          <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %> €</p>
+          <p><%= line.service.supplies.map(&:product).map(&:price).join(', ') %>€</p>
+          <% @prices << line.service.supplies.map(&:product).map(&:price).join(', ')%>
         <% end %>
       </div>
       <% end %>
+    </div>
+
+    <div>
+      <% @sum = 0 %>
+      <% @prices.each { |a| @sum+=a.to_i }  %>
+      <p> <strong>Total :</strong> <%= @sum %> €</p>
+    </div>
+
+    <div>
+      <p>Accompte : 30%</p>
+      <p>Validité du devis : 3 mois</p>
     </div>
 
     <div>
