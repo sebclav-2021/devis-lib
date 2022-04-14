@@ -16,13 +16,15 @@
 @import "pages/customers/new";
 @import "pages/users";
 @import "pages/quotes/*";
+@import "pages/services/*";
+
 
 
 body {
   background-color: #FFB800;
 }
 
-body, h1, h2, h3, p {
+body, h1, h2, h3, h4, h5, p {
   font-family: 'Roboto Condensed', sans-serif;
 }
 

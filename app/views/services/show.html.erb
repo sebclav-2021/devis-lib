@@ -2,37 +2,32 @@
   <h2> <%= @service.category.name.capitalize %></h2>
 </div>
 
-<div>
-  <h4><%= @service.name %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer le nom de ce service ?" } do %>
-                <i class="fa-regular fa-trash-can"></i>
-              <% end %></h4>
-  <h5> <%= @service.description %><%= link_to service_path(@service), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer la description associée à ce service ?" } do %>
-                <i class="fa-regular fa-trash-can"></i>
-              <% end %></h5>
+<div class="text-center">
+  <h4><strong>Nom du service</strong></h4>
+  <h4><%= @service.name %></h4>
+  <br>
+  <h5><strong>Description</strong></h5>
+  <h5><%= @service.description %></h5>
+  <br>
 </div>
 
 
-<div>
+<div class="container-product">
   <% @service.supplies.each do |supply|%>
     <p><%= supply.product.name %> <%= supply.product.price %> €</p>
   <% end %>
 </div>
 
-<div class="form-control-sm">
+<div class="container-product">
   <h3>Ajouter un produit</h3>
   <%= form_with url: service_supplies_path(@service), method: :post do |form| %>
     <%= form.select :product_id, Product.all.collect {|p| [ p.name, p.id ] } %>
-    <%= form.number_field :quantity %>
     <br>
-    <%= form.submit "Ajouter" %>
+    <div class="bt-container">
+      <%= link_to 'Retour', categories_path, class: 'back back-service' %>
+      <%= form.submit "Ajouter", class: "submit-service" %>
+    </div>
   <% end %>
 </div>
 
-  <div>
-      <%= link_to 'Retour', categories_path, class: 'back' %>
-  </div>
-
-<br>
-<br>
-<br>
  <!-- <%= link_to "Créer un produit", new_product_path %> -->
