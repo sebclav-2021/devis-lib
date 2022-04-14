@@ -16,43 +16,17 @@
       </div>
     </div>
     <br>
-    <br>
-    <div class="date">
-      <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
-    </div>
-    <br>
-    <br>
 
     <div>
       <%= link_to "Générer pdf", quote_path(@quote)+".pdf", target: "_blank", class: "pdf-button"  %>
     </div>
-<br>
-    <div>
-      <% @prices = [] %>
-      <% @categories.each do |category| %>
-        <h2><u><strong><%= category %></strong></u></h2>
-
-      <div>
-        <% @lines_to_display[category].each do |line| %>
-          <h3><%= line.service.name %> | Quantité : <%= line.quantity %> | Unité : <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %> </h3>
-          <p style="padding:0 0 0 20px;"><%= line.service.description %> </p>
-          <p style="padding:0 0 0 30px;"><%= line.service.supplies.map(&:product).map(&:name).join(', ') %>  |  Coût : <%= line.service.supplies.map(&:product).map(&:price).join(', ') %>€</p>
-          <% @prices << ((line.service.supplies.map(&:product).map(&:price).join(', ')).to_i * (line.quantity))%>
-        <% end %>
-      </div>
-      <% end %>
-    </div>
-<br>
-    <div>
-      <% @sum = 0 %>
-      <% @prices.each { |a| @sum+=a.to_i }  %>
-      <h3> <strong>Total :</strong> <%= @sum %> €</h3>
+    <br>
+    <br>
+    <div class="date">
+      <p> Fait le <%= @quote.created_at.strftime("%d-%m-%Y") %></p>
     </div>
 
-    <div>
-      <p>Accompte : 30%</p>
-      <p>Validité du devis : 3 mois</p>
-    </div>
+    <br>
 
     <div>
       <%= form_with url: quote_lines_path(@quote), method: :post do |form| %>
@@ -61,5 +35,36 @@
       <%= form.submit "Ajouter", id: "pdf-submit"%>
       <% end %>
     </div>
+
+    <div>
+      <% @prices = [] %>
+      <% @categories.each do |category| %>
+        <h2><u><strong><%= category %></strong></u></h2>
+
+      <div>
+        <% @lines_to_display[category].each do |line| %>
+          <h3><%= line.service.name %> | Quantité : <%= line.quantity %> | <%= line.service.supplies.map(&:product).map(&:unite).join(', ') %> </h3>
+          <p style="padding:0 0 0 20px;"><%= line.service.description %> </p>
+          <p style="padding:0 0 0 30px;"><%= line.service.supplies.map(&:product).map(&:name).join(', ') %>  |  Coût : <%= line.service.supplies.map(&:product).map(&:price).join(', ') %>€</p>
+          <% @prices << ((line.service.supplies.map(&:product).map(&:price).join(', ')).to_i * (line.quantity))%>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <br>
+    <p style="padding:0 0 0 20px;">* Main d'oeuvre : 150€ par poste de travail</p>
+<br>
+    <div>
+      <% @sum = 0 %>
+      <% @prices.each { |a| @sum+=a.to_i + 150}  %>
+      <h3> <strong>Total :</strong> <%= @sum %> €</h3>
+    </div>
+
+    <div>
+      <p>Accompte : 30%</p>
+      <p>Validité du devis : 3 mois</p>
+    </div>
+
+
   </div>
 </div>
