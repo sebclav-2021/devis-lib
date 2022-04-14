@@ -53,7 +53,7 @@ Product.create!(name: "Joint WC pour sortie de cuvette l.11 x H.0.9 x P.7 cm", u
 Product.create!(name: "Joint WC pour soupape SAS l.9.5 x H.15 x P.1 cm", unite: "Pièce", price: "3.40", workforce: false)
 Product.create!(name: "Lavabo colonne en céramique, blanc", unite: "Pièce", price: "39.40", workforce: false)
 Product.create!(name: "Lavabo Rétro CELESTE PASTELLO 60cm", unite: "Pièce", price: "157.10", workforce: false)
-Product.create!(name: "Main d'oeuvre", unite: "Forfait", price: "150.00", workforce: false)
+Product.create!(name: "Forfait démolition/évacuation", unite: "Forfait", price: "300.00", workforce: false)
 Product.create!(name: "Mitigeur thermostatique de baignoire chromé", unite: "Pièce", price: "125.10", workforce: false)
 Product.create!(name: "Mitigeur thermostatique de baignoire noir mat", unite: "Pièce", price: "150.10", workforce: false)
 Product.create!(name: "Mitigeur mécanique de baignoire chromé", unite: "Pièce", price: "99.00", workforce: false)
