@@ -1,10 +1,17 @@
 .contour {
   display: flex;
   justify-content: center;
+  .form-control {
+    display: inline-block;
+  }
 }
 
 .form-actions {
   display: flex;
   justify-content: center;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-control-md {
+  font-size: 20px;
 }

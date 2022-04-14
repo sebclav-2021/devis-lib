@@ -5,47 +5,48 @@
 <div class="contour-homepage">
   <div class="new">
     <h2>Créer une prestation</h2>
-    <div class="form-control-sm">
       <%= simple_form_for(@category) do |f| %>
-        <div class="form-inputs">
+        <div class="form-actions">
           <%= f.input :name, label: "Nom", placeholder: "Nom de la prestation" %>
         </div>
         <div class="form-actions">
           <%= f.submit 'Valider'%>
         </div>
       <% end %>
-    </div>
   </div>
   <br>
   <br>
+
 
 
   <div class="categories">
     <h2>Personnaliser mes prestations</h2>
-    <div class="lists-categories">
-      <% @categories.each do |category| %>
-        <p>
-          <div class="form-control-sm" data-controller="form-service">
-            <div class="d-flex">
-              <h3 class="name">
-                <%= category.name.capitalize %>
-              </h3>
+    <div class="line-container">
+      <span class="grey-line"></span>
+    </div>
+    <% @categories = @categories.sort { |a, b| a.name <=> b.name } %>
+    <% @categories.each do |category| %>
+      <div class="form-control-sm" data-controller="form-service">
+          <div class="category-line">
+            <h3 class="name">
+              <%= category.name.capitalize %>
+              <i class="fa-solid fa-plus my-plus" data-form-service-target="plus" data-action="click->form-service#displayForm"></i>
+            </h3>
+            <div class="category-icons">
               <%= link_to category_path(category), class: 'trash',  method: :delete, data: { confirm: "Etes-vous sûr(e) de vouloir supprimer cette prestation ?" } do %>
                 <i class="fa-regular fa-trash-can"></i>
               <% end %>
-                <i class="fa-solid fa-plus my-plus" data-form-service-target="plus" data-action="click->form-service#displayForm"></i>
-            </div>
-            <div class="form-inputs d-none" data-form-service-target="form">
-              <%= simple_form_for [category, @service] do |f| %>
-                <%= f.input :name, label: "Nom", placeholder: "Nom du service" %>
-                <%= f.input :description, label: "Description", placeholder: "Description du service" %>
-                <%= f.input :unit, label: "Unité", placeholder: "m², litres, forfait..." %>
-                <%= f.submit "Créer un service" %>
-              <% end %>
             </div>
           </div>
-        </p>
-      <% end %>
-    </div>
-  </div>
+
+          <div class="form-inputs d-none" data-form-service-target="form">
+            <%= simple_form_for [category, @service] do |f| %>
+              <%= f.input :name, label: "Nom", placeholder: "Nom du service" %>
+              <%= f.input :description, label: "Description", placeholder: "Description du service" %>
+              <%= f.input :unit, label: "Unité", placeholder: "m², litres, forfait..." %>
+              <%= f.submit "Créer un service" %>
+            <% end %>
+          </div>
+      </div>
+    <% end %>
 </div>

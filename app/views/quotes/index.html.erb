@@ -3,23 +3,16 @@
 </div>
 
 <div class="contour">
-  <div class="customers-page">
-    <div>
-      <ul>
-        <div class="quotes">
-          <% @quotes.each do |quote| %>
-              <div>
-                <h2 class="name">
-                <%= link_to quote_path(quote), class: 'trash',
-                    method: :delete,
-                    data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce devis ?" } do%>
-                    <i class="fa-regular fa-trash-can"></i>
-                    <%= link_to "#{quote.customer.name} - Devis n° #{quote.id}", quote %>
-                <% end %></h2>
-              </div>
-          <% end %>
-        </div>
-      </ul>
-    </div>
+  <div class="quotes-container">
+    <% @quotes = @quotes.sort { |a, b| a.customer.name <=> b.customer.name } %>
+    <% @quotes.each do |quote| %>
+          <h3 class="name-quote">
+          <%= link_to quote_path(quote), class: 'trash',
+              method: :delete,
+              data: { confirm: "Etes-vous sûr(e) de vouloir supprimer ce devis ?" } do%>
+              <i class="fa-regular fa-trash-can"></i>
+              <%= link_to "#{quote.customer.name} - Devis n° #{quote.id}", quote %>
+          <% end %></h3>
+    <% end %>
   </div>
 </div>

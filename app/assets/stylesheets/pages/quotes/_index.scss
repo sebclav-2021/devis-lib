@@ -1,0 +1,11 @@
+.quotes-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.name-quote {
+  padding-bottom: 20px;
+  font-size: 26px;
+}
